@@ -1,0 +1,15 @@
+version: '3'
+volumes:
+  data:
+services:
+  db:
+    image: mariadb:10.11
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: leasing-contract-db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin123
+    volumes:
+      - data:/var/lib/mysql
+    ports:
+      - "3306:3306"

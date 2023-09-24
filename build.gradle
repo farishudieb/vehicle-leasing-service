@@ -1,0 +1,57 @@
+buildscript {
+	repositories {
+		maven {
+			url "https://plugins.gradle.org/m2/"
+		}
+	}
+	dependencies {
+		classpath "io.freefair.gradle:lombok-plugin:8.3"
+		classpath 'org.mariadb.jdbc:mariadb-java-client:2.1.2'
+		classpath 'org.flywaydb:flyway-mysql:9.8.1'
+	}
+}
+
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.16'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id "io.freefair.lombok" version "8.3"
+	id "org.flywaydb.flyway" version "9.22.1"
+	id "org.springdoc.openapi-gradle-plugin" version "1.7.0"
+}
+
+flyway {
+	url = 'jdbc:mariadb://localhost:3306/leasing-contract-db'
+	user = 'admin'
+	password = 'admin123'
+}
+
+group = 'com.allane'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '11'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.mariadb.jdbc:mariadb-java-client:2.1.2'
+	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.2'
+
+	compileOnly 'org.projectlombok:lombok:1.18.30'
+	annotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
