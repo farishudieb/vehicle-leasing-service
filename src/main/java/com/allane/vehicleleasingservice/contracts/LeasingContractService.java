@@ -1,7 +1,7 @@
 package com.allane.vehicleleasingservice.contracts;
 
-import com.allane.vehicleleasingservice.InvalidRequestException;
-import com.allane.vehicleleasingservice.NotFoundException;
+import com.allane.vehicleleasingservice.exceptions.InvalidRequestException;
+import com.allane.vehicleleasingservice.exceptions.NotFoundException;
 import com.allane.vehicleleasingservice.customers.CustomerEntity;
 import com.allane.vehicleleasingservice.customers.CustomerService;
 import com.allane.vehicleleasingservice.vehicles.VehicleEntity;

@@ -1,4 +1,4 @@
-package com.allane.vehicleleasingservice;
+package com.allane.vehicleleasingservice.exceptions;
 
 public class NotFoundException extends RuntimeException{
 

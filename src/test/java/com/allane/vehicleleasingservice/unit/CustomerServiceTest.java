@@ -1,6 +1,6 @@
 package com.allane.vehicleleasingservice.unit;
 
-import com.allane.vehicleleasingservice.NotFoundException;
+import com.allane.vehicleleasingservice.exceptions.NotFoundException;
 import com.allane.vehicleleasingservice.customers.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

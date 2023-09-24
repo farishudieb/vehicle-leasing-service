@@ -1,6 +1,6 @@
 package com.allane.vehicleleasingservice.customers;
 
-import com.allane.vehicleleasingservice.NotFoundException;
+import com.allane.vehicleleasingservice.exceptions.NotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

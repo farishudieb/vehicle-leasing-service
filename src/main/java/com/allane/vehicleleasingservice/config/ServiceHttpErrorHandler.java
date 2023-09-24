@@ -1,7 +1,7 @@
 package com.allane.vehicleleasingservice.config;
 
-import com.allane.vehicleleasingservice.InvalidRequestException;
-import com.allane.vehicleleasingservice.NotFoundException;
+import com.allane.vehicleleasingservice.exceptions.InvalidRequestException;
+import com.allane.vehicleleasingservice.exceptions.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

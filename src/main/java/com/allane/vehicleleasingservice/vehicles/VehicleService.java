@@ -1,7 +1,7 @@
 package com.allane.vehicleleasingservice.vehicles;
 
-import com.allane.vehicleleasingservice.InvalidRequestException;
-import com.allane.vehicleleasingservice.NotFoundException;
+import com.allane.vehicleleasingservice.exceptions.InvalidRequestException;
+import com.allane.vehicleleasingservice.exceptions.NotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 

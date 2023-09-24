@@ -2,7 +2,7 @@ package com.allane.vehicleleasingservice.integration;
 
 import com.allane.vehicleleasingservice.util.DummyObjects;
 import com.allane.vehicleleasingservice.util.JSONUtil;
-import com.allane.vehicleleasingservice.NotFoundException;
+import com.allane.vehicleleasingservice.exceptions.NotFoundException;
 import com.allane.vehicleleasingservice.contracts.LeasingContractDto;
 import com.allane.vehicleleasingservice.contracts.LeasingContractOverviewDto;
 import com.allane.vehicleleasingservice.contracts.LeasingContractRepository;
