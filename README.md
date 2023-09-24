@@ -55,9 +55,10 @@ I added some business checks on the leasing contract:
 > http://localhost:8080/swagger-ui/index.html
 
 # What can be done more
-I made sure all required features are implemented, and the overview page is working in a simple solution (with a direct hibernate query), but following in a real production scenario in my mind to be done (but not done partially or completely in order to save development and review time of the interview task at hand as it is not intended to be production ready)
+I made sure all required features are implemented, and the overview query is working in a simple solution (with a single hibernate query), but following points in a real production case are in my mind to be done (but not done partially or completely in order to save development and review time of the interview task at hand)
 
 - Index creation at the DB level to enhance the query. For example we could have an index on the createdAt field in the leasing-contracts table to speed up overview query (as it is used to sort data in desc order)
 - I used annotation for DTO validation, that should suffice, but it could be more annotations to add more constraints (like customer birthdate should not 500 years ago)
 - Test coverage is absolutely not enough, I made sure to demonstrate writing unit and integration tests, but they don't cover all cases and in a production case a 95% test coverage should be achieved
 - Although hibernate is quite convenient, but in the case of the overview query, the performance of a native named query might be better
+- Currently I am using the local MariaDB to execute the integration test, and I delete created objects at the beginning of each run of a test. I would prefer to use testcontainers framework to provide the DB so development DB in the localhost remains for development usage instead to be cleared every now and then.
